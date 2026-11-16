@@ -7,6 +7,8 @@ Exact dates are kept in a private working file outside this repository. Only rel
 |---|---|---|
 | patient_id | text | Anonymous sequential ID |
 | age_bracket | text | e.g. 30-39 |
+| gender | text | F / M / Other, as recorded on the case paper. "Not recorded" if missing |
+| area_region | text | North Goa / South Goa / Elsewhere in India. Derived from the address, never the address itself. "Not recorded" if missing |
 | first_visit_month | text | Month and year of the first (new case) visit, e.g. 2024-03 |
 | observation_days | integer | Days from the first visit to the end of data collection (derived) |
 

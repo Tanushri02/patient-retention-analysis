@@ -14,7 +14,7 @@ The clinic's lead doctor has noticed that patients who miss their first follow-u
 
 1. **Initial dropout:** what share of new patients attend their first follow-up?
 2. **Secondary retention:** of the patients who do attend, how long do they keep returning before they lapse?
-3. **Segments:** do these rates differ by complaint category, age bracket or consultation mode (in-person vs call/video)?
+3. **Segments:** do these rates differ by complaint category, age bracket, gender, region or consultation mode (in-person vs call/video)?
 
 ## Key definitions
 
@@ -40,6 +40,8 @@ These follow a distinction made in outpatient-retention research between **initi
 |---|---|
 | `patient_id` | Anonymous sequential ID (P001, P002, ...) |
 | `age_bracket` | Brackets, not exact age |
+| `gender` | As recorded on the case paper (F, M, Other). Missing values kept as "Not recorded" |
+| `area_region` | North Goa, South Goa or Elsewhere in India. Broad region only, derived from the address and never stored as a village or town. Missing values kept as "Not recorded" |
 | `first_visit_month` | Month and year only (e.g. 2024-03). Groups patients into cohorts |
 | `observation_days` | Days from first visit to end of data collection (derived) |
 
@@ -56,14 +58,14 @@ These follow a distinction made in outpatient-retention research between **initi
 
 Exact dates are held in a private working file outside this repository, and only the relative fields above are used for analysis and publication.
 
-Optional fields (gender, area, referral source) are recorded only where the case papers note them clearly.
+Gender and region are entered for every patient; where a case paper does not state them, the value is "Not recorded" and the share of missing values will be reported. Referral source is not collected because it is not consistently recorded.
 
 ## Privacy and ethics
 
 - **Anonymised at entry:** no names, phone numbers or addresses are entered. Each patient gets a coded ID, and the ID-to-patient key is kept on paper at the clinic, not in this repository or on any device used for analysis.
 - **Broad categories only:** complaints are recorded as broad categories, ages as brackets, and visit timing as days since the first visit rather than calendar dates.
 - **No patient-level data in this repository.** Only aggregated results, charts and synthetic example rows are published.
-- **Permission:** [the clinic's lead practitioner has approved the use of records for this project: confirm before publishing].
+- **Permission:** [the clinic's lead practitioner has approved the use of records for this project].
 - Follows the professional-secrecy duties in the National Commission for Homoeopathy's Code of Ethics (2022).
 
 ## Method (planned)
@@ -73,7 +75,7 @@ Optional fields (gender, area, referral source) are recorded only where the case
 - [ ] Explore the data (distributions, visit gaps)
 - [ ] Calculate the initial dropout rate
 - [ ] Build cohort tables and retention curves (45-day lapse rule)
-- [ ] Compare segments (complaint category, age bracket, consultation mode)
+- [ ] Compare segments (complaint category, age bracket, gender, region, consultation mode)
 - [ ] Write up findings and recommendations for the clinic
 
 ## Tools

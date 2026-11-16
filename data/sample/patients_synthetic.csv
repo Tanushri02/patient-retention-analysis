@@ -1,9 +1,9 @@
-patient_id,age_bracket,first_visit_month,observation_days
-S001,30-39,2024-01,539
-S002,50-59,2024-01,532
-S003,0-9,2024-02,511
-S004,40-49,2024-02,497
-S005,20-29,2024-03,483
-S006,60-69,2024-03,469
-S007,30-39,2024-04,454
-S008,10-19,2024-05,413
+patient_id,age_bracket,gender,area_region,first_visit_month,observation_days
+S001,30-39,F,South Goa,2024-01,539
+S002,50-59,M,South Goa,2024-01,532
+S003,0-9,F,North Goa,2024-02,511
+S004,40-49,F,South Goa,2024-02,497
+S005,20-29,M,Elsewhere in India,2024-03,483
+S006,60-69,F,South Goa,2024-03,469
+S007,30-39,Not recorded,North Goa,2024-04,454
+S008,10-19,M,South Goa,2024-05,413
