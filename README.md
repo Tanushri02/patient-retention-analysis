@@ -84,7 +84,7 @@ Excel (data entry with validated dropdowns), Python (Pandas), SQL. Power BI dash
 
 ## Background
 
-- Research on dropout from outpatient care separates *initial* dropout from *secondary* dropout. See Bondolfi et al., "Determinants of dropout in a community-based mental health crisis centre", BMC Psychiatry (2016): https://pmc.ncbi.nlm.nih.gov/articles/PMC4837516/
+- Research on dropout from outpatient care separates *initial* dropout from *secondary* dropout. See Henzen et al., "Determinants of dropout in a community-based mental health crisis centre", BMC Psychiatry (2016): https://pmc.ncbi.nlm.nih.gov/articles/PMC4837516/
 - Retention in outpatient care is often defined by repeat visits within a set window rather than by a single universal gap. This project uses a clinic-specific lapse cutoff instead, because homoeopathic follow-up intervals vary with the medicine supplied.
 
 ## Anticipated limitations
