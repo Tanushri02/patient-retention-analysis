@@ -1,6 +1,7 @@
 # Patient Retention Analysis: Homoeopathic Clinic (In Progress)
 
 > **Status:** Data collection phase. No results are published yet. This README describes the question, design and method, and will be updated as each stage is completed.
+**Last updated:** November 2026. [Schema finalised; digitising case records is next.]
 
 ## Summary
 
@@ -20,8 +21,8 @@ The clinic's lead doctor has noticed that patients who miss their first follow-u
 
 | Term | Definition used in this project |
 |---|---|
-| Local patient | Patient who lives and works locally. Patients based abroad (who return roughly once a year) are excluded because their visit pattern is different. |
-| Initial dropout | New patient who does not attend a first follow-up within **[30] days** of the first visit (expected at about 15 days, plus a grace period) |
+| Local patient | Resident in Goa or elsewhere in India, excluding patients based abroad. Patients based abroad (who return roughly once a year) are excluded because their visit pattern is different. |
+| Initial dropout | New patient who does not attend a first follow-up within **30 days** of the first visit (expected at about 15 days, plus a grace period) |
 | Lapsed | Patient with no visit for **45 days** after their last visit (cutoff agreed with the clinic's lead doctor) |
 
 These follow a distinction made in outpatient-retention research between **initial dropout** (missing the first follow-up) and **secondary dropout** (disengaging later).
@@ -65,13 +66,13 @@ Gender and region are entered for every patient; where a case paper does not sta
 - **Anonymised at entry:** no names, phone numbers or addresses are entered. Each patient gets a coded ID, and the ID-to-patient key is kept on paper at the clinic, not in this repository or on any device used for analysis.
 - **Broad categories only:** complaints are recorded as broad categories, ages as brackets, and visit timing as days since the first visit rather than calendar dates.
 - **No patient-level data in this repository.** Only aggregated results, charts and synthetic example rows are published.
-- **Permission:** [the clinic's lead practitioner has approved the use of records for this project].
+- **Permission:** The clinic’s lead practitioner has approved the use of anonymised records for this project.
 - Follows the professional-secrecy duties in the National Commission for Homoeopathy's Code of Ethics (2022).
 
 ## Method (planned)
 
 - [ ] Digitise the sampled case records into the two-table structure
-- [ ] Clean and quality-check (duplicates, date formats, inconsistent categories)
+- [ ] Clean and quality-check (duplicates, visit-day calculations, inconsistent categories)
 - [ ] Explore the data (distributions, visit gaps)
 - [ ] Calculate the initial dropout rate
 - [ ] Build cohort tables and retention curves (45-day lapse rule)
@@ -85,14 +86,14 @@ Excel (data entry with validated dropdowns), Python (Pandas), SQL. Power BI dash
 ## Background
 
 - Research on dropout from outpatient care separates *initial* dropout from *secondary* dropout. See Henzen et al., "Determinants of dropout in a community-based mental health crisis centre", BMC Psychiatry (2016): https://pmc.ncbi.nlm.nih.gov/articles/PMC4837516/
-- Retention in outpatient care is often defined by repeat visits within a set window rather than by a single universal gap. This project uses a clinic-specific lapse cutoff instead, because homoeopathic follow-up intervals vary with the medicine supplied.
+- In outpatient research, retention can be defined by repeat visits within a set time window. For example, Fleishman et al. (2012) counted a patient as retained if they had at least two outpatient visits 90 days apart in each year in care ([J Acquir Immune Defic Syndr 60(3):249-259](https://pmc.ncbi.nlm.nih.gov/articles/PMC3383913/)). This project instead uses a clinic-specific lapse cutoff of 45 days, agreed with the clinic's lead doctor, because homoeopathic follow-up intervals vary with the medicine supplied.
 
 ## Anticipated limitations
 
 - A small sample (about 100-150 patients), so subgroup comparisons will rest on small numbers and will be treated as descriptive, not conclusive.
 - Data entered by hand from paper records, with some ambiguity in handwriting and notes.
 - A single clinic, so findings may not generalise.
-- Some optional fields may be missing for many patients.
+- Gender and region may be missing for some patients (shown as ‘Not recorded’).
 
 ## Repository structure
 
