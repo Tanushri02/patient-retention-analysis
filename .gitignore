@@ -1,0 +1,27 @@
+# --- Real patient data must never be committed ---
+# Everything in data/ is ignored except the synthetic sample and the data README
+data/*
+!data/README.md
+!data/sample/
+
+# Spreadsheets (the Excel entry sheet holds real records)
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+!data/sample/*.csv
+
+# ID-to-patient keys, exports, scans
+*key*
+*mapping*
+*.pdf
+*.jpg
+*.jpeg
+*.png
+!visuals/*.png
+
+# Python / Jupyter / macOS
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store

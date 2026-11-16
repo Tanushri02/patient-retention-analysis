@@ -1,0 +1,16 @@
+visit_id,patient_id,days_since_first_visit,visit_type,complaint_category,consult_mode
+V001,S001,0,New,Digestive,In-person
+V002,S001,16,Follow-up,Digestive,In-person
+V003,S001,50,Follow-up,Digestive,Call
+V004,S002,0,New,Musculoskeletal,In-person
+V005,S003,0,New,Respiratory,In-person
+V006,S003,16,Follow-up,Respiratory,In-person
+V007,S004,0,New,Skin,In-person
+V008,S005,0,New,Mental-Emotional,Call
+V009,S005,16,Follow-up,Mental-Emotional,Call
+V010,S005,46,Follow-up,Mental-Emotional,In-person
+V011,S006,0,New,Chronic-General,In-person
+V012,S006,16,Follow-up,Chronic-General,In-person
+V013,S007,0,New,Respiratory,In-person
+V014,S008,0,New,Pediatric,In-person
+V015,S008,16,Follow-up,Pediatric,In-person
