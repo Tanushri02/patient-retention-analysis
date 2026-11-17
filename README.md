@@ -6,7 +6,7 @@
 
 ## Summary
 
-A small homoeopathic clinic in Goa, India (run by a family member) keeps all patient records on paper. This project builds an anonymised dataset from those records and uses cohort and retention analysis to answer a practical question for the clinic: **which new patients come back, and which do not?**
+A small homoeopathic clinic in Goa, India (run by a family member) keeps patient records as individual case documents, with no structured dataset. This project builds an anonymised dataset from those records and uses cohort and retention analysis to answer a practical question for the clinic: **which new patients come back, and which do not?**
 
 ## Problem
 
@@ -30,7 +30,7 @@ These follow a distinction made in outpatient-retention research between **initi
 
 ## Data
 
-**Source:** paper case records, digitised by hand into a spreadsheet.
+**Source:** the clinic’s patient case documents, read manually and entered into a structured spreadsheet.
 
 **Sample:** a random sample of about 100-150 local patients whose first visit fell between January and June 2024, followed through all of their later visits.
 
@@ -64,11 +64,11 @@ Gender and region are entered for every patient; where a case paper does not sta
 
 ## Privacy and ethics
 
-- **Anonymised at entry:** no names, phone numbers or addresses are entered. Each patient gets a coded ID, and the ID-to-patient key is kept on paper at the clinic, not in this repository or on any device used for analysis.
+- **Anonymised at entry:** no names, phone numbers or addresses are entered. Each patient gets a coded ID. The ID-to-patient key stays on the clinic’s laptop and is not copied into this repository or onto any other device.
 - **Broad categories only:** complaints are recorded as broad categories, ages as brackets, and visit timing as days since the first visit rather than calendar dates.
 - **No patient-level data in this repository.** Only aggregated results, charts and synthetic example rows are published.
 - **Permission:** The clinic’s lead practitioner has approved the use of anonymised records for this project.
-- Follows the professional-secrecy duties in the National Commission for Homoeopathy's Code of Ethics (2022).
+- Designed with reference to the professional-secrecy duties in Regulations 16 and 36(l) of the National Commission for Homoeopathy’s Code of Ethics (2022).
 
 ## Method (planned)
 
@@ -82,7 +82,7 @@ Gender and region are entered for every patient; where a case paper does not sta
 
 ## Tools
 
-Excel (data entry with validated dropdowns), Python (Pandas), SQL. Power BI dashboard in progress.
+Excel (data entry with validated dropdowns). Python (Pandas), SQL and Power BI are planned for analysis and dashboarding.
 
 ## Background
 
@@ -92,7 +92,7 @@ Excel (data entry with validated dropdowns), Python (Pandas), SQL. Power BI dash
 ## Anticipated limitations
 
 - A small sample (about 100-150 patients), so subgroup comparisons will rest on small numbers and will be treated as descriptive, not conclusive.
-- Data entered by hand from paper records, with some ambiguity in handwriting and notes.
+- Data transcribed by hand from free-text case documents, with some inconsistency in how notes are written.
 - A single clinic, so findings may not generalise.
 - Gender and region may be missing for some patients (shown as 'Not recorded').
 
