@@ -1,7 +1,8 @@
 # Patient Retention Analysis: Homoeopathic Clinic (In Progress)
 
 > **Status:** Data collection phase. No results are published yet. This README describes the question, design and method, and will be updated as each stage is completed.
-**Last updated:** November 2026. [Schema finalised; digitising case records is next.]
+
+**Last updated:** November 2026. Schema finalised; digitising case records is next.
 
 ## Summary
 
@@ -21,7 +22,7 @@ The clinic's lead doctor has noticed that patients who miss their first follow-u
 
 | Term | Definition used in this project |
 |---|---|
-| Local patient | Resident in Goa or elsewhere in India, excluding patients based abroad. Patients based abroad (who return roughly once a year) are excluded because their visit pattern is different. |
+| Local patient | Resident in Goa or elsewhere in India. Patients based abroad (who return roughly once a year) are excluded because their visit pattern is different. |
 | Initial dropout | New patient who does not attend a first follow-up within **30 days** of the first visit (expected at about 15 days, plus a grace period) |
 | Lapsed | Patient with no visit for **45 days** after their last visit (cutoff agreed with the clinic's lead doctor) |
 
@@ -93,7 +94,7 @@ Excel (data entry with validated dropdowns), Python (Pandas), SQL. Power BI dash
 - A small sample (about 100-150 patients), so subgroup comparisons will rest on small numbers and will be treated as descriptive, not conclusive.
 - Data entered by hand from paper records, with some ambiguity in handwriting and notes.
 - A single clinic, so findings may not generalise.
-- Gender and region may be missing for some patients (shown as ‘Not recorded’).
+- Gender and region may be missing for some patients (shown as 'Not recorded').
 
 ## Repository structure
 
